@@ -1,13 +1,13 @@
 import React from "react";
 import { Badge, Container, Dropdown, FormControl, Navbar, Nav } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <a >Shopping Cart</a>
+          <Link to={"/"}>Shopping Cart</Link>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
