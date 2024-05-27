@@ -4,7 +4,7 @@ import { cartReducer } from "./Reducer";
 const Cart = createContext();
 
 function Context({ children }) {
-  const products = [...Array(2)].map(() => ({
+  const products = [...Array(20)].map(() => ({
     id: faker.string.uuid(),
     name: faker.commerce.productName(),
     price: faker.commerce.price(),
