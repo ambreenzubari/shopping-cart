@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import React, { createContext, useContext, useReducer } from "react";
 import { cartReducer } from "./Reducer";
 const Cart = createContext();
+faker.seed(99)
 
 function Context({ children }) {
   const products = [...Array(20)].map(() => ({

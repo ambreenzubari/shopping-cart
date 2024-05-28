@@ -20,6 +20,10 @@
     margin: 10px;
     height: 86vh;
 }
+.products{
+    width: 30%;
+    margin: 10px;
+}
 
 .filters > span{
     padding-bottom: 20px;
