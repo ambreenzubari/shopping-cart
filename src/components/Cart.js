@@ -6,7 +6,8 @@ import { AiFillDelete } from "react-icons/ai";
 
 function Cart() {
   const {
-    state: { cart },dispatch
+    state: { cart },
+    dispatch,
   } = CartState();
   const [total, setTotal] = useState();
 
@@ -21,7 +22,7 @@ function Cart() {
         <ListGroup>
           {cart.map((prod) => (
             <ListGroup.Item key={prod.id}>
-              <Row style={{alignItems:"center"}}>
+              <Row style={{ alignItems: "center" }}>
                 <Col md={2}>
                   <Image src={prod.image} alt={prod.name} fluid rounded />
                 </Col>
@@ -35,7 +36,19 @@ function Cart() {
                   <Rating rating={prod.rating} />
                 </Col>
                 <Col md={2}>
-                  <Form.Control as="select" value={prod.qty}>
+                  <Form.Control
+                    as="select"
+                    value={prod.qty}
+                    onChange={(e) =>
+                      dispatch({
+                        type: "CHANGE_CARD_QTY",
+                        payload: {
+                          id: prod.id,
+                          qty: parseInt(e.target.value), // Parse the value as an integer
+                        },
+                      })
+                    }
+                  >
                     {[...Array(prod.inStock).keys()].map((x) => (
                       <option key={x + 1}>{x + 1}</option>
                     ))}
