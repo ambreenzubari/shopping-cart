@@ -6,8 +6,8 @@ function Rating({rating, onClick, style}) {
    <>
     {
         [...Array(5)].map((_,i)=>(
-            <span key={i} onClick={()=>onClick(i)} style={{cursor:"pointer"} }>
-                 {rating>=i?(
+            <span key={i} onClick={()=>onClick(i+1)} style={{cursor:"pointer"} }>
+                 {rating>i&&rating!=0?(
                     <AiFillStar fontSize="15px"/>
                  ):(
 
