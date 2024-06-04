@@ -64,3 +64,36 @@
 .summary{
     width: 30%;
 }
+
+
+
+/* Media Queries */
+@media (max-width: 771px) {
+  .filters {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .filters > span {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 18px !important;
+  }
+
+  .productContainer {
+    width: 58%;
+    padding: 0;
+  }
+
+  .cart{
+        margin-top: 7px;
+        margin-left: 10px;
+  }
+
+  .products {
+    width: 100%;
+  }
+}
